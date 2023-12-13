@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link rel="stylesheet" href="./styles.css">
+<body>
+  <div class="container">
+  <div id="todoList">
+    <h2>TO-DO LIST</h2>
+    <div>
+      <input type="text" id="newTask" placeholder="Add a new task">
+      <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="tasks">
+      <!-- Tasks will be added dynamically here -->
+    </ul>
+  </div>          
+
+  <div id="completedTasks">
+    <h2>COMPLETED TASK</h2>
+    <ul>
+      <!-- Completed tasks will be added dynamically here -->
+    </ul>
+  </div>
+</div>
+  <script src="./script.js"></script>
+</body>
+</html>

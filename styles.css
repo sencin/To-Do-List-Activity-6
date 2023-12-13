@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Set a background color for better visibility of the blur effect */
+}
+
+  #todoList {
+    margin: 20px;
+  }
+
+  .task {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  li{
+    text-decoration: none;
+    list-style: none;
+    justify-content: center ;
+    padding: 5px 0px;
+  }
+  .completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  .task button{
+    margin-left: 10px;
+  }
+  .container {
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9); /* Set a background color with some opacity */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    background-image: url() ;
+  }
+  input, button{
+    padding: 10px;
+    border-radius: 5px;
+  }
