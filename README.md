@@ -6,13 +6,14 @@ Website : https://nakamoto-satoshii.github.io/To-Do-List-Activity-6/
 
 
 <div style="text-align: justify;">
+    
     Login MYPHPADMIN Create new database and import database; 
-
+    
     if(db.exist){
     drop database studentportaldb;    
     }
     else{
-    import database;
+    import studentportaldb;
     }
     
     after importing database selec SQL (between structure and Search)
