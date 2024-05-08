@@ -8,16 +8,15 @@ Website : https://nakamoto-satoshii.github.io/To-Do-List-Activity-6/
 
 
 
-
-     ##  HOW TO USE
+##  HOW TO USE
 <div style="text-align: justify;">
- 
+
     Changelogs :
-     Removed redundant codes both java classes
-     added logic for connecting database
-     commented null codes that adds complexity
-     IDE used, Command Terminal
-     my head hurts seeing errors
+     -Removed redundant codes both java classes
+     -added logic for connecting database
+     -commented null codes that adds complexity
+     -IDE used, Command Terminal
+     -my head hurts seeing errors
 
     Login MYPHPADMIN Create new database and import database; 
     
