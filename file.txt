@@ -1,0 +1,51 @@
+<?php
+// Database configuration
+$host = 'localhost';
+$dbname = 'your_database_name';
+$username = 'your_database_username';
+$password = 'your_database_password';
+
+// Path to the SQL file
+$sqlFilePath = 'path/to/your/import.sql';
+
+// Connect to the MySQL server (not to a specific database yet)
+$mysqli = new mysqli($host, $username, $password);
+
+// Check connection
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
+// Create the database if it doesn't exist
+$createDbQuery = "CREATE DATABASE IF NOT EXISTS $dbname";
+if ($mysqli->query($createDbQuery) !== TRUE) {
+    die("Error creating database: " . $mysqli->error);
+}
+
+// Select the database
+$mysqli->select_db($dbname);
+
+// Read the SQL file
+$sql = file_get_contents($sqlFilePath);
+if ($sql === false) {
+    die("Could not read the SQL file.");
+}
+
+// Split the file into individual queries
+$sqlArray = explode(';', $sql);
+
+// Execute each query
+foreach ($sqlArray as $query) {
+    // Trim any whitespace from the query
+    $query = trim($query);
+    if (!empty($query)) {
+        if ($mysqli->query($query) !== TRUE) {
+            echo "Error executing query: " . $mysqli->error;
+        }
+    }
+}
+
+echo "SQL file imported successfully.";
+
+$mysqli->close();
+?>
